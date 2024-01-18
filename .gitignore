@@ -1,0 +1,6 @@
+*.txt
+.data/
+.logger/
+.saved_figs/
+.saved_models/
+__pycache__
