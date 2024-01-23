@@ -257,6 +257,14 @@ def get_ddcs(lpip:lpips.LPIPS, attack_iterator, sd_actvs_tgt, target_total):
                 acc_count[j] += 1
 
                 last_key = key
+
+    # record ddcs best
+    ddcs_best += torch.sum(torch.reciprocal(recovered)).item()
+    # record ddcs average
+    for j in range(acc_count.shape[0]):
+        if acc_count[j] > 0:
+            ddcs_avg += 1 / (acc_dist[j] / acc_count[j])
+
     return ddcs_best / target_total, ddcs_avg / target_total
 
 def load_evaluator(args):
