@@ -1,4 +1,4 @@
-# ACM MM2024 Paper ID 4620
+# Model Inversion
 This is the code for the manuscript "A Sample-Level Evaluation and Generative Framework for Model Inversion Attacks". All experiments are conducted on 4 GPUs of NVIDIA GeForce RTX 3090 server with Linus OS, CUDA 12.2, and PyTorch 1.7.1. Our code utilizes *DistributedDataParallel* from PyTorch to train the model in parallel manner.
 
 ## Setup
